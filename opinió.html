@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>La La Land</title>
+    <meta name="description" content="Pàgina web sobre la pel·lícula la la land">
+    <meta charset="UTF-8">
+    <meta name="author" content="Jordi Palomino Escarrà">
+    <link rel="shorcut icon" href="Imatges/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="estils.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="JavaScript">
+        function Alternar(Seccio){
+            if (Seccio.style.display=="none"){
+                Seccio.style.display=""
+                }
+            else{
+                Seccio.style.display="none"
+                }
+        }
+        </script>
+
+</head>
+<header>
+    <img src="Imatges/Imatgelogo.png" alt="Imatge inici La La Land" width="20%" height="20%">
+</header>
+<nav>
+    <ul>
+        <li> <a href="paginaprincipal.html">Inici</a></li>
+        <li> <a href="director.html">Director</a></li>
+        <li> <a href="personatges.html">Personatges</a></li>
+        <li> <a href="cinemes.html">Cinemes</a></li>
+        <li> <a href="media.html">Media</a></li>
+        <li> <a class="active" href="opinió.html">Opinió</a></li>
+        <li> <a href="links.html">Links</a></li>
+        <li> <a href="musica.html">Música</a></li>
+
+    </ul>
+</nav>
+<section>
+    <h1>Formulari</h1>
+</section>
+<article>
+    <form action="Imatges/enviat.png">
+        <label for="nomcog">Nom i Cognoms*:  </label><input type="text" name="coreu" id="nomcog" placeholder="Nom" required><br/><br/>
+        <label for="correu">Correu*:  </label><input type="email" name="correu" id="correu" placeholder="exemple@gmail.com" required><br/><br/>
+        <a>Has vist alguna vegada la pel·licula?*</a><br/>
+        <label for="vist">Si: </label><input onclick="Alternar(seccio1) "type="radio" name="vist" id="vist" value="si" required>
+        <label for="vist">No: </label><input onclick="Alternar(seccio1) "type="radio" name="vist" id="vist" value="no" checked required><br/><br/>
+        <div id="seccio1" style="display: none;">
+            <label for="institut">Quan la vas veure?  </label>
+            <input type="date" id="vistdia" name="vistdia">
+        </div>
+        <label for="explicacio">Què és el que més t'ha agradat de la pel·lícula: </label><br/><textarea type="textarea" name="explicacio" id="explicacio"></textarea><br/><br/>
+        <label for="valoracio">De l'1 al 10 que li posaries?  </label> <input type="range" name="valoracio" id="valoracio" min="1" max="10"><br/><br/>
+        <input type="submit" value="Enviar"><br/><br/>
+    </form>
+</article>
+
+<footer>
+    <strong>La Pàgina està feta per en Jordi Palomino Escarrà i només per ús escolar, en cap moment és vol donar
+        profit econòmic a la web.</strong>
+</footer>
+
+<body>
+
+</body>
+
+</html>
